@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    background: #f9f9f9;
+    color: #333;
+}
+
+header {
+    background: #fb6b13;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.titulo-portifolio {
+    display: flex;
+    align-items: center;   /* alinha a base da imagem com a base do texto */
+    gap: 5px;                /* espaço mínimo entre texto e imagem */
+    font-size: 2em;
+}
+
+.titulo-portifolio img {
+    height: 200px;           /* altura maior */
+    width: auto;
+     margin-left: -100px;
+}
+
+
+.logo {
+    height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.secao {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.integrantes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.integrantes {
+    display: flex;
+    justify-content: center;
+    align-items: center;  /* centraliza no meio da tela */
+    gap: 20px;
+    flex-wrap: nowrap;        /* impede quebra de linha */
+    overflow-x: auto;         /* rolagem horizontal caso a tela seja pequena */
+}
+
+
+.integrante img {
+    width: 130px;
+    height: 130px;
+    border-radius: 75%;
+}
+
+.integrante .github-icon {
+    width: 70px;
+    height: 70px;
+    
+}
+
+.integrante a {
+    display: block;       /* transforma em bloco */
+    text-align: center;   /* centraliza o conteúdo dentro do bloco */
+    margin-top: 5px;      /* espaço entre o GitHub e o texto acima */
+}
+
+.integrantes {
+    display: flex;
+    gap: 20px;               /* espaço entre os cards */
+    flex-wrap: nowrap;        /* impede quebra de linha */
+    overflow-x: auto;         /* ativa scroll horizontal */
+    padding-left: 50px;       /* espaço antes do primeiro card */
+    padding-bottom: 10px;     /* evita que a barra de scroll corte o conteúdo */
+    justify-content: flex-start;
+    scroll-behavior: smooth;  /* rolagem suave */
+}
+
+.integrante {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    width: 150px;      /* largura fixa */
+    flex-shrink: 0;    /* não deixa o card amassar */
+}
+
+
+footer {
+    background: #fb6b13;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+    .github-icon {
+      display: inline-block;
+      border-radius: 50%;
+      padding: 10px;
+      background: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .github-icon img {
+      width: 80px; /* tamanho ajustável */
+      height: auto;
+      border-radius: 50%;
+      display: block;
+    }
+
+    .github-icon:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.35);
+    }
+
+    .github-icon:active {
+      transform: scale(0.95);
+      box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.35);
+    }
+
+        .menu-link {
+      position: relative;
+      display: inline-block;
+      font-size: 15px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+
+    /* Linha escondida */
+    .menu-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: white;
+      transition: width 0.3s ease-in-out;
+    }
+
+    /* Quando passa o mouse, a linha aparece */
+    .menu-link:hover::after {
+      width: 25%;
+    }
+
