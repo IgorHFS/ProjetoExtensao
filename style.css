@@ -167,5 +167,14 @@ footer {
     /* Quando passa o mouse, a linha aparece */
     .menu-link:hover::after {
       width: 25%;
+
     }
 
+    @media screen and (max-width: 835px) {
+        .menu-link{
+            display: none;
+        }
+        .titulo-portifolio{
+            flex-direction: column;
+        }
+    }
