@@ -1,13 +1,35 @@
+/*Fontes Personalizadas*/
+@font-face {
+	font-family: "Flexo";
+	src: url('font/Flexo-Black.woff');
+}
+@font-face {
+	font-family: "Flexo";
+	src: url('font/Flexo-Regular.woff');
+}
+/*---------------------------*/
+/*Body*/
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Flexo";
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.5;
     background: #f9f9f9;
     color: #333;
+    height: 100%;
+	width: 100%;
+	position: absolute;
 }
 
+.fundo {
+    background: 
+    linear-gradient(rgba(255, 255, 200, 0), rgba(255, 255, 255, 255)),
+    url("imagens/body_bg.png") center/cover no-repeat;    
+}
+/*---------------------------*/
+
 header {
-    background: #fb6b13;
+    background-image: url("imagens/body_bg2.png");
+    background-color: #e40000;
     color: #fff;
     padding: 10px 20px;
     display: flex;
@@ -15,22 +37,44 @@ header {
     justify-content: space-between;
 }
 
+h2 {
+    color: #e40000;
+    font-family: 'Flexo';
+    font-weight: 900;
+    font-style: normal;
+}
+
 .titulo-portifolio {
     display: flex;
-    align-items: center;   /* alinha a base da imagem com a base do texto */
-    gap: 5px;                /* espaço mínimo entre texto e imagem */
-    font-size: 2em;
+    justify-content: center;
+    align-items: baseline;
+    font-size: 2.5em;
+    font-family: 'Flexo';
+    font-weight: 900;
+    font-style: normal;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+    text-align: center;
 }
-
-.titulo-portifolio img {
-    height: 200px;           /* altura maior */
-    width: auto;
-     margin-left: -100px;
-}
-
 
 .logo {
     height: 50px;
+}
+
+.logo2 {
+    height: 140px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.logo3 {
+    height: 60px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+    padding-top: 20px;
 }
 
 nav ul {
@@ -47,14 +91,50 @@ nav ul li a {
 
 .secao {
     padding: 40px 20px;
-    max-width: 900px;
+    max-width: 1300px;
     margin: auto;
+    text-align: justify;
 }
 
-.integrantes {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.secao2 {
+    padding: 40px 20px;
+    max-width: 100%;
+    margin: auto;
+    justify-content: center;
+}
+
+.secao3 {
+    padding: 60px 60px;
+    max-width: 1300px;
+    margin: auto;
+    text-align: justify;
+    background-color: #ddd;
+    border-start-start-radius: 50px;
+    border-start-end-radius: 50px;
+    border-end-start-radius: 50px;
+    border-end-end-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.secao4 {
+    padding: 60px 60px;
+    max-width: 1300px;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    text-align: justify;
+    background-color: #ddd;
+    border-start-start-radius: 50px;
+    border-start-end-radius: 50px;
+    border-end-start-radius: 50px;
+    border-end-end-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+}
+
+.secao2 h2 {
+   color: #f9f9f9;
+   font-size: 2em;
 }
 
 .integrantes {
@@ -66,8 +146,14 @@ nav ul li a {
     overflow-x: auto;         /* rolagem horizontal caso a tela seja pequena */
 }
 
+.integrante:hover, .integrante2:hover {
+    background-image: url("imagens/body_bg2.png");
+    background-color: #e40000;
+    color: #fff;
+    border: none;
+}
 
-.integrante img {
+.integrante img, .integrante2 img {
     width: 130px;
     height: 130px;
     border-radius: 75%;
@@ -85,6 +171,24 @@ nav ul li a {
     margin-top: 5px;      /* espaço entre o GitHub e o texto acima */
 }
 
+.integrante2 img {
+    width: 130px;
+    height: 130px;
+    border-radius: 75%;
+}
+
+.integrante2 .github-icon {
+    width: 70px;
+    height: 70px;
+    
+}
+
+.integrante2 a {
+    display: block;       /* transforma em bloco */
+    text-align: center;   /* centraliza o conteúdo dentro do bloco */
+    margin-top: 42px;      /* espaço entre o GitHub e o texto acima */
+}
+
 .integrantes {
     display: flex;
     gap: 20px;               /* espaço entre os cards */
@@ -92,7 +196,7 @@ nav ul li a {
     overflow-x: auto;         /* ativa scroll horizontal */
     padding-left: 50px;       /* espaço antes do primeiro card */
     padding-bottom: 10px;     /* evita que a barra de scroll corte o conteúdo */
-    justify-content: flex-start;
+    justify-content: center;
     scroll-behavior: smooth;  /* rolagem suave */
 }
 
@@ -107,13 +211,43 @@ nav ul li a {
     flex-shrink: 0;    /* não deixa o card amassar */
 }
 
+.integrante2 {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    width: 225px;      /* largura fixa */
+    flex-shrink: 0;    /* não deixa o card amassar */
+}
+
+.pokeball {
+    height: 200px;
+    display: block;
+    justify-content: center;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 150px;
+}
+
+#quem-somos {
+    background-image: url("imagens/body_bg.png");
+    background-color: #383838;
+    border-start-start-radius: 50px;
+    border-start-end-radius: 50px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 0%;
+}
 
 footer {
-    background: #fb6b13;
+    background-image: url("imagens/body_bg.png");
+    background-color: #383838;
     color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 2px;
+    
 }
 
     .github-icon {
@@ -146,10 +280,12 @@ footer {
       position: relative;
       display: inline-block;
       font-size: 15px;
-      font-weight: bold;
       color: white;
       text-decoration: none;
       padding: 5px 10px;
+      font-family: 'Flexo';
+      font-weight: bold;
+      font-style: normal;
     }
 
     /* Linha escondida */
