@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação do Projeto - Pokéshots</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ----- ESTILO ESPECÍFICO PARA ESTA PÁGINA ----- */
+
+        .container-doc {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #e40000;
+            font-family: "Flexo";
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        /* ----- CARROSSEL ----- */
+        .carrossel-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .carrossel-slide {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .carrossel-slide img {
+            width: 100%;
+            border-radius: 20px;
+        }
+
+        .btn-carrossel {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 12px;
+            background: #e40000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+            border-radius: 50%;
+        }
+
+        .btn-esq {
+            left: 10px;
+        }
+
+        .btn-dir {
+            right: 10px;
+        }
+
+        /* ----- DER ----- */
+        .der-container {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .der-container img {
+            max-width: 90%;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="imagens/pokeball.png" alt="logo" class="logo">
+    <nav>
+        <ul>
+            <a class="menu-link" href="index.html">Voltar ao Início</a>
+        </ul>
+    </nav>
+</header>
+
+<div class="container-doc">
+
+    <h1>Descrição do MVP</h1>
+    <!-- DESCRIÇÃO DO MVP -->
+    <section id="mvp">
+
+
+        <p>O MVP desenvolvido representa a primeira versão em protótipo do jogo “Pokéshots”, uma experiência interativa inspirada no clássico desafio “Quem é esse Pokémon?”. O objetivo principal desta versão mínima é validar a mecânica central do jogo: <strong>permitir que o usuário tente adivinhar qual é o Pokémon apresentado, recebendo uma análise visual e comparativa de seus acertos.</strong></p>
+
+        <h3>❓Como funciona o MVP</h3>
+
+        <p>Ao iniciar o jogo, o usuário se depara com uma interface semelhante a uma Pokédex, composta por duas áreas principais:</p>
+
+        <hr>
+
+        <h3>🕹 Tela do Desafio</h3>
+
+        <p>Nesta área é apresentado o enigma relacionado ao Pokémon. Existem duas variações:</p>
+        <ul>
+            <li>Exibição da silhueta do Pokémon</li>
+            <li>Exibição de uma descrição da Pokédex</li>
+        </ul>
+
+        <p>Em ambos os casos, o usuário deve digitar o nome do Pokémon que acredita ser. Essa é a ação central do MVP.</p>
+
+        <hr>
+
+        <h3>📊 Tela de Avaliação</h3>
+
+        <p>Após a tentativa, o sistema compara a resposta com os dados reais da Pokédex e apresenta uma tabela que avalia diferentes atributos:</p>
+
+        <ul>
+            <li>Nome do Pokémon</li>
+            <li>Tipo</li>
+            <li>Habitat</li>
+            <li>Cores</li>
+            <li>Peso</li>
+            <li>Altura</li>
+            <li>Estágio evolutivo</li>
+        </ul>
+
+        <p>Cada detalhe recebe uma marcação visual:</p>
+
+        <ul>
+            <li>🟢 <strong>Correto</strong></li>
+            <li>🟡 <strong>Parcialmente correto</strong></li>
+            <li>🔴 <strong>Incorreto</strong></li>
+        </ul>
+
+        <p>Assim, mesmo que o jogador não acerte o nome completo, pode observar o que se aproximou do resultado real, reforçando o caráter educativo e competitivo do jogo.</p>
+
+        <hr>
+
+        <h3>🎯 Objetivo do MVP</h3>
+
+        <p>Esta primeira versão do projeto foi desenvolvida apenas em formato de protótipo visual, composta por telas que ilustram como o jogo funcionará no futuro. Ainda não contamos com elementos avançados como ranking, níveis, progressão do jogador ou todas as mecânicas completas da experiência final — e isso faz parte da proposta desta etapa inicial.</p>
+        <p>O foco do MVP é permitir que a ideia principal brilhe:</p>
+        <ul>
+            
+            <li>Validar a jogabilidade central de adivinhar o Pokémon e receber uma avaliação clara;</li>
+            <li>Testar o interesse dos usuários no formato “adivinhar e avaliar”</li>
+            <li>Apresentar visualmente como seria a experiência dentro da Pokédex</li>
+        </ul>
+
+        <hr>
+
+        <h3>🖼 Visual do MVP</h3>
+
+        <p>As telas apresentadas ao final desta página representam a interface prototipadas desta primeira versão do jogo e ilustram como o usuário interage com o desafio.</p>
+
+    </section>
+
+    <!-- CARROSSEL DE IMAGENS -->
+    <section id="carrossel">
+        <h2>Telas Pokéshots</h2>
+
+        <div class="carrossel-container">
+            <div class="carrossel-slide" id="slides">
+
+                <img src="imagens/telaum.jpg" alt="Tela 1">
+                <img src="imagens/teladois.jpg" alt="Tela 2">
+                <img src="imagens/telatres.jpg" alt="Tela 3">
+                <img src="imagens/telaquatro.jpg" alt="Tela 4">
+                <img src="imagens/telacinco.jpg" alt="Tela 5">
+                <img src="imagens/telaseis.jpg" alt="Tela 6">
+                <img src="imagens/telasete.jpg" alt="Tela 7">
+
+            </div>
+
+            <button class="btn-carrossel btn-esq" onclick="moverSlide(-1)">&#10094;</button>
+            <button class="btn-carrossel btn-dir" onclick="moverSlide(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- DER -->
+    <section id="der" class="der-container">
+        <h2>Diagrama Entidade-Relacionamento (DER)</h2>
+        <p>Abaixo estão o diagrama conceitual e o diagrama lógico do banco de dados do projeto:</p>
+
+        <img src="imagens/conceitual.png" alt="DER Conceitual">
+        <img src="imagens/logico.png" alt="DER Lógico">
+
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2025 - Projeto Acadêmico UniFil</p>
+</footer>
+
+<script>
+    let index = 0;
+
+    function moverSlide(direcao) {
+        const slides = document.getElementById("slides");
+        const total = slides.children.length;
+
+        index += direcao;
+
+        if (index < 0) index = total - 1;
+        if (index >= total) index = 0;
+
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+</script>
+
+</body>
+</html>
