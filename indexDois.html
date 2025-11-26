@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* ----- ESTILO ESPECÍFICO PARA ESTA PÁGINA ----- */
+        /* ----- ESTILO ESPECÍFICO ----- */
 
         .container-doc {
             max-width: 1100px;
@@ -15,20 +15,26 @@
             padding: 40px 20px;
         }
 
-        h1, h2 {
-            text-align: center;
+        /* 🔥 TÍTULOS PADRONIZADOS */
+        h1, h2, h3 {
             color: #e40000;
             font-family: "Flexo";
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
 
+        h1 { font-size: 34px; }
+        h2 { font-size: 28px; }
+        h3 { font-size: 24px; }
+
+        /* Texto */
         p, li {
             font-size: 18px;
             line-height: 1.6;
         }
 
-        ul {
-            margin-left: 20px;
-        }
+        ul { margin-left: 20px; }
 
         /* ----- CARROSSEL ----- */
         .carrossel-container {
@@ -64,13 +70,8 @@
             border-radius: 50%;
         }
 
-        .btn-esq {
-            left: 10px;
-        }
-
-        .btn-dir {
-            right: 10px;
-        }
+        .btn-esq { left: 10px; }
+        .btn-dir { right: 10px; }
 
         /* ----- DER ----- */
         .der-container {
@@ -100,20 +101,34 @@
 
 <div class="container-doc">
 
-    <h1>Descrição do MVP</h1>
-    <!-- DESCRIÇÃO DO MVP -->
-    <section id="mvp">
+    <!-- 🔥 CASO DE USO ACIMA DO MVP -->
+    <h2>Diagrama de Caso de Uso do Jogo</h2>
 
+    <p style="text-align: center; margin-bottom: 20px;">
+        Abaixo está o diagrama de caso de uso que representa as interações do usuário com o sistema:
+    </p>
+
+    <div style="text-align: center;">
+        <img src="imagens/CasoDeUsoPokeshots.png" 
+             alt="Diagrama de Caso de Uso" 
+             style="max-width: 95%; height: auto; border-radius: 10px;">
+    </div>
+
+
+    <!-- 🔥 DESCRIÇÃO DO MVP -->
+    <h1>Descrição do MVP</h1>
+
+    <section id="mvp">
 
         <p>O MVP desenvolvido representa a primeira versão em protótipo do jogo “Pokéshots”, uma experiência interativa inspirada no clássico desafio “Quem é esse Pokémon?”. O objetivo principal desta versão mínima é validar a mecânica central do jogo: <strong>permitir que o usuário tente adivinhar qual é o Pokémon apresentado, recebendo uma análise visual e comparativa de seus acertos.</strong></p>
 
-        <h3>❓Como funciona o MVP</h3>
+        <h3>Como funciona o MVP</h3>
 
         <p>Ao iniciar o jogo, o usuário se depara com uma interface semelhante a uma Pokédex, composta por duas áreas principais:</p>
 
         <hr>
 
-        <h3>🕹 Tela do Desafio</h3>
+        <h3>Tela do Desafio</h3>
 
         <p>Nesta área é apresentado o enigma relacionado ao Pokémon. Existem duas variações:</p>
         <ul>
@@ -125,7 +140,7 @@
 
         <hr>
 
-        <h3>📊 Tela de Avaliação</h3>
+        <h3>Tela de Avaliação</h3>
 
         <p>Após a tentativa, o sistema compara a resposta com os dados reais da Pokédex e apresenta uma tabela que avalia diferentes atributos:</p>
 
@@ -147,36 +162,22 @@
             <li>🔴 <strong>Incorreto</strong></li>
         </ul>
 
-        <p>Assim, mesmo que o jogador não acerte o nome completo, pode observar o que se aproximou do resultado real, reforçando o caráter educativo e competitivo do jogo.</p>
-
         <hr>
 
         <h3>🎯 Objetivo do MVP</h3>
 
-        <p>Esta primeira versão do projeto foi desenvolvida apenas em formato de protótipo visual, composta por telas que ilustram como o jogo funcionará no futuro. Ainda não contamos com elementos avançados como ranking, níveis, progressão do jogador ou todas as mecânicas completas da experiência final — e isso faz parte da proposta desta etapa inicial.</p>
-        <p>O foco do MVP é permitir que a ideia principal brilhe:</p>
-        <ul>
-            
-            <li>Validar a jogabilidade central de adivinhar o Pokémon e receber uma avaliação clara;</li>
-            <li>Testar o interesse dos usuários no formato “adivinhar e avaliar”</li>
-            <li>Apresentar visualmente como seria a experiência dentro da Pokédex</li>
-        </ul>
+        <p>Esta primeira versão do projeto foi desenvolvida apenas em formato de protótipo visual, composta por telas que ilustram como o jogo funcionará no futuro...</p>
 
         <hr>
-
-        <h3>🖼 Visual do MVP</h3>
-
-        <p>As telas apresentadas ao final desta página representam a interface prototipadas desta primeira versão do jogo e ilustram como o usuário interage com o desafio.</p>
-
     </section>
 
-    <!-- CARROSSEL DE IMAGENS -->
+
+    <!-- 🔥 CARROSSEL -->
     <section id="carrossel">
         <h2>Telas Pokéshots</h2>
 
         <div class="carrossel-container">
             <div class="carrossel-slide" id="slides">
-
                 <img src="imagens/telaum.jpg" alt="Tela 1">
                 <img src="imagens/teladois.jpg" alt="Tela 2">
                 <img src="imagens/telatres.jpg" alt="Tela 3">
@@ -184,7 +185,6 @@
                 <img src="imagens/telacinco.jpg" alt="Tela 5">
                 <img src="imagens/telaseis.jpg" alt="Tela 6">
                 <img src="imagens/telasete.jpg" alt="Tela 7">
-
             </div>
 
             <button class="btn-carrossel btn-esq" onclick="moverSlide(-1)">&#10094;</button>
@@ -192,14 +192,14 @@
         </div>
     </section>
 
-    <!-- DER -->
+
+    <!-- 🔥 DER -->
     <section id="der" class="der-container">
         <h2>Diagrama Entidade-Relacionamento (DER)</h2>
-        <p>Abaixo estão o diagrama conceitual e o diagrama lógico do banco de dados do projeto:</p>
+        <p>Abaixo estão o diagrama conceitual e o diagrama lógico:</p>
 
         <img src="imagens/conceitual.png" alt="DER Conceitual">
         <img src="imagens/logico.png" alt="DER Lógico">
-
     </section>
 
 </div>

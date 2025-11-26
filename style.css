@@ -314,3 +314,30 @@ footer {
             flex-direction: column;
         }
     }
+
+/* ============================
+   PADRONIZAÇÃO DOS TÍTULOS
+   ============================ */
+.container-doc h1,
+.container-doc h2,
+.container-doc h3 {
+    font-size: 28px;
+    color: #e40000;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Caso queira manter somente h1 maior, descomente:
+.container-doc h1 {
+    font-size: 32px;
+}
+*/
+
+/* ============================
+   CENTRALIZAR TODOS OS PARÁGRAFOS
+   ============================ */
+.container-doc p {
+    text-align: center;
+}
+
